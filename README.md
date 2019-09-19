@@ -1,6 +1,6 @@
 # cumpa2.0
 
-**SPA on React
+**SPA on React**
 
 For frontend
 - bulma.css
@@ -11,6 +11,7 @@ For backend
 - express.js
 
 # Functionality:
+- Online booking system for fitness classes
 - User register
 - User login
 - Amigo/Gym user toogle button
