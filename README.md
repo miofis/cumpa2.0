@@ -1,15 +1,14 @@
 # cumpa2.0
 
-Hi,
-How are U?
-This is for a PWA site with design I will provide
+**SPA on React
 
 For frontend
 - bulma.css
 - react.js
 
 For backend
-- express.js / flask
+- SQL
+- express.js
 
 # Functionality:
 - User register
@@ -39,5 +38,5 @@ For backend
 - TeamViewer or Anydesk
 - Skype call if necessary
 
-Thanks for reading the project
+Thanks for reading the project<br>
 Marcelo
