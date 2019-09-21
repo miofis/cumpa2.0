@@ -1,13 +1,14 @@
 # Cumpa 2.0
 
 ## Project requirements
+- [Node js LTS](https://nodejs.org/en/download/)
 - [Docker desktop](https://www.docker.com/products/docker-desktop)
 
 ## Run project
 ```sh
 # run from root directory
+npm ci
 npm run docker-dev
-# notice you don't need to run npm install or anything
 ```
 This will start both a MySQL instance and the server. It may take a while to start, but once it's running there's almost no need to stop it. The project has `Hot Module Replacement` configured, meaning any change to the source code will be visible on file save. The only time you need to restart the server is when there's a change in dependencies.
 

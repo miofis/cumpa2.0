@@ -1,15 +1,14 @@
 import Link from 'next/link'
 import '../styles/styles.sass'
 
-const Header = props => (
-  <div className='navbar'>
+const Header = () => (
+  <div className="navbar">
 
     <div className="navbar-brand">
       <Link href="/">
         <a className="navbar-item is-size-4">Cumpa.FIT</a>
       </Link>
     </div>
-
     <div className="navbar-menu">
 
       <div className="navbar-end">

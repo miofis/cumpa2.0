@@ -1,17 +1,17 @@
-import Header from '../components/Header'
+import React from 'react'
+import fetch from 'isomorphic-unfetch'
 import Link from 'next/link'
+import Header from '../components/Header'
 import '../styles/styles.sass'
 
-import fetch from 'isomorphic-unfetch';
-
 const StoryTeller = props => (
-  <div className='tile is-parent' key={props.login.uuid}>
+  <div className="tile is-parent" key={props.login.uuid}>
     <div className="is-child box has-text-centered">
-      <figure className='image is-inline-block'>
-        <img src={props.picture.large} alt="" style={{ borderRadius: '50%' }}/>
+      <figure className="image is-inline-block">
+        <img src={props.picture.large} alt="" style={{ borderRadius: '50%' }} />
       </figure>
-      <p className='is-size-6'>Lorem ipsum dolor sit amet, consectetur.</p>
-      <p className='is-size-7 has-text-right'>{props.name.first}</p>
+      <p className="is-size-6">Lorem ipsum dolor sit amet, consectetur.</p>
+      <p className="is-size-7 has-text-right">{props.name.first}</p>
     </div>
   </div>
 )
@@ -20,7 +20,7 @@ const ClassDetail = props => (
   <div className="tile is-parent" key={props.id}>
     <div className="box has-text-centered">
       <figure className="image is-inline-block">
-        <img src={props.picture} alt=""/>
+        <img src={props.picture} alt="" />
       </figure>
       <p className="is-size-6">{props.name}</p>
       <p className="is-size-7">{props.description}</p>
@@ -35,9 +35,9 @@ const Index = props => (
       <div className="columns">
         <div className="column has-text-centered is-one-third">
           <h1 className="title">Entrená donde sea y con quien quieras.</h1>
-          <div className='has-text-left'>
-            <p className='is-size-5'><img src='/static/bullet_point.png' alt="" width="24px"/> Con tu amigo, profe o compañero.</p>
-            <p className='is-size-5'><img src='/static/bullet_point.png' alt="" width="24px"/> Enterate de clases <span className='has-text-weight-bold'>GRATIS</span>!</p>
+          <div className="has-text-left">
+            <p className="is-size-5"><img src="/static/bullet_point.png" alt="" width="24px" /> Con tu amigo, profe o compañero.</p>
+            <p className="is-size-5"><img src="/static/bullet_point.png" alt="" width="24px" /> Enterate de clases <span className="has-text-weight-bold">GRATIS</span>!</p>
           </div>
         </div>
         <div className="column">
@@ -76,12 +76,12 @@ const Index = props => (
         font: 16px menlo;
         color: #000;
       }
-    `}</style>
+    `}
+    </style>
   </div>
 )
 
 Index.getInitialProps = async () => {
-
   const response = await fetch('https://randomuser.me/api?results=4')
   const data = await response.json()
 
