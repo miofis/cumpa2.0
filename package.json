@@ -9,8 +9,6 @@
     "start": "NODE_ENV=production node server/index.js",
     "lint": "eslint pages/ server/ components/",
     "docker-build-sh": "docker inspect docker-sh:1.0.0 > /dev/null 2>&1 && echo 'docker-sh image found' || docker build --file docker/sh.dockerfile -t docker-sh:1.0.0 .",
-    "docker-build-checks": "docker build --file docker/checks.dockerfile -t docker-checks:1.0.0 .",
-    "docker-lint": "npm run docker-build-checks && docker run docker-checks:1.0.0 /bin/bash -c 'npm run lint'",
     "docker-dev": "npm run docker-build-sh && docker-compose --file docker/docker-compose.yml up --build; docker-compose --file docker/docker-compose.yml down"
   },
   "repository": {
