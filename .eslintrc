@@ -4,7 +4,11 @@
   "globals": {
     "document": true,
     "window": true,
-    "process": true,
+    "process": true
+  },
+  "plugins": ["jest"],
+  "env": {
+    "jest/globals": true
   },
   "rules": {
     "import/extensions": 0,
