@@ -22,6 +22,7 @@
     "jsx-a11y/anchor-is-valid": "off",
     "import/newline-after-import": "off",
     "react/react-in-jsx-scope": "off",
+    "jsx-a11y/label-has-associated-control": "off",
     "semi": ["error", "never"],
     "comma-dangle": ["error", "never"],
     "arrow-parens": ["error", "as-needed"]
