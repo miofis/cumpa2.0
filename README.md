@@ -1,25 +1,25 @@
 # Cumpa 2.0
 
 ## Project requirements
-- [Node js LTS](https://nodejs.org/en/download/)
-- [Docker desktop](https://www.docker.com/products/docker-desktop)
+- [Node js v10.x](https://nodejs.org/en/download/)
+- [Yarn](https://yarnpkg.com/lang/en/)
 
 ## Run project
 ```sh
-# run from root directory
-npm ci
-npm run docker-dev
+# run from backend directory
+yarn install --frozen-lockfile
+yarn dev
+
+# from a second terminal, run from frontend directory
+yarn install --frozen-lockfile
+yarn start
 ```
-This will start both a MySQL instance and the server. It may take a while to start, but once it's running there's almost no need to stop it. The project has `Hot Module Replacement` configured, meaning any change to the source code will be visible on file save. The only time you need to restart the server is when there's a change in dependencies.
-
-Open your browser and go to http://localhost:3000/
-
-You can access the MySQL instance at port 9995. (user=root, pass=root)
+This will start both backend server and frontend application. The project has `Hot Module Replacement` configured, meaning any change to the source code will be visible on file save. The only time you need to restart the server is when there's a change in dependencies.
 
 ## Documentation
-- [Next js](https://nextjs.org/learn/basics/getting-started)
 - [React js](https://reactjs.org/docs/introducing-jsx.html)
 - [Express js](https://expressjs.com/en/guide/routing.html)
+- [Passport js](http://www.passportjs.org/docs/)
 - [Sequelize ORM](https://sequelize.org/master)
 - [Bulma css](https://bulma.io/documentation)
 
