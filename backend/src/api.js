@@ -1,5 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+const cors = require('cors')
 const passport = require('passport')
 const { Strategy } = require('passport-local')
 const session = require('express-session')
@@ -34,6 +35,7 @@ const api = express.Router()
 const server = express()
 server.use(bodyParser.json())
 server.use(bodyParser.urlencoded({ extended: false }))
+server.use(cors())
 server.use(session({
     secret: 'keyboard cat',
     store: sessionStore,
