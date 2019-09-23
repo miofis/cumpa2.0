@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import logo from "./logo.svg"
 import "./App.css"
+import "bulma/bulma.sass"
 
 const withConfig = f => (
     fetch("/config.json")
@@ -12,9 +13,13 @@ function App() {
     const [apiStatus, setApiStatus] = useState("PENDING")
     useEffect(() => {
         withConfig(async config => {
-            const response = await fetch(`${config.API}/api/health`)
-            const data = await response.json()
-            setApiStatus(data.message)
+            try {
+                const response = await fetch(`${config.API}/api/health`)
+                const data = await response.json()
+                setApiStatus("online")
+            } catch(e) {
+                setApiStatus("offline")
+            }
         })
     })
 
