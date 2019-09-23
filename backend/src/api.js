@@ -10,26 +10,9 @@ const { db } = require('./model')
 const sessionStore = new SequelizeStore({ db })
 sessionStore.sync()
 
-passport.use(new Strategy(
-    ((username, password, done) => {
-        if (!username) {
-            return done(null, false, { message: 'Incorrect username' })
-        }
-        if (password !== 'secret') {
-            return done(null, false, { message: 'Incorrect password' })
-        }
+// TODO: configure passport strategy
 
-        return done(null, { username })
-    })
-))
-
-passport.serializeUser((user, done) => {
-    done(null, user.username)
-})
-
-passport.deserializeUser((id, done) => {
-    done(null, { username: id })
-})
+// TODO: implement user serialization and deserialization
 
 const api = express.Router()
 const server = express()
@@ -37,6 +20,7 @@ server.use(bodyParser.json())
 server.use(bodyParser.urlencoded({ extended: false }))
 server.use(cors())
 server.use(session({
+    // TODO: change secret
     secret: 'keyboard cat',
     store: sessionStore,
     resave: false,
@@ -51,23 +35,11 @@ api.get('/health', (req, res) => {
     })
 })
 
-api.post('/login', passport.authenticate('local', {
-    successRedirect: '/',
-    failureRedirect: '/login'
-}))
-
-api.post('/logout', (req, res) => {
-    if (req.user) {
-        return req.session.destroy(() => {
-            res.redirect('/')
-        })
-    }
-    return res.redirect('/')
-})
-
-api.get('/user/me', (req, res) => res.json({
-    user: req.user
-}))
+// TODO: uncomment after strategy is implemented
+// api.post('/login', passport.authenticate('local', {
+//     successRedirect: '/',
+//     failureRedirect: '/login'
+// }))
 
 server.use('/api', api)
 
