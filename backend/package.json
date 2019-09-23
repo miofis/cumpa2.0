@@ -1,0 +1,47 @@
+{
+  "name": "cumpa2.0",
+  "version": "1.0.0",
+  "description": "**SPA on React**",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "test": "jest",
+    "start": "NODE_ENV=production node src/index.js",
+    "lint": "eslint src/",
+    "heroku-push": "heroku container:push web --app cumpa2-0",
+    "heroku-release": "heroku container:release web --app cumpa2-0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MdAeRvCoEp/cumpa2.0.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MdAeRvCoEp/cumpa2.0/issues"
+  },
+  "homepage": "https://github.com/MdAeRvCoEp/cumpa2.0#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-session-sequelize": "^6.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "sequelize": "^5.19.0",
+    "sqlite3": "^4.1.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "eslint": "^6.4.0",
+    "eslint-plugin-jest": "^22.17.0",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.2"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
