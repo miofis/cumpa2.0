@@ -5,6 +5,8 @@
     "heroku-install": "curl https://cli-assets.heroku.com/install.sh | sh",
     "heroku-login": "docker login --username=_ --password=$HEROKU_API_KEY registry.heroku.com",
     "heroku-deploy": "yarn --cwd backend/ heroku-push && yarn --cwd backend/ heroku-release",
-    "maybe-deploy": "./scripts/maybe_deploy.sh"
+    "maybe-deploy": "./scripts/maybe_deploy.sh",
+    "firebase-install": "yarn global add firebase-tools",
+    "firebase-deploy": "yarn --cwd frontend/ build && yarn --cwd frontend/ set-api && yarn --cwd frontend/ deploy"
   }
 }

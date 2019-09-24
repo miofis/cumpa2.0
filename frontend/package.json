@@ -14,7 +14,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "lint": "eslint src/",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "set-api": "echo \"{ \\\"API\\\": \\\"${API}\\\" }\" > build/config.json",
+    "deploy": "firebase deploy --token \"$FIREBASE_TOKEN\" --only hosting:$FIREBASE_ENV"
   },
   "eslintConfig": {
     "extends": "react-app"

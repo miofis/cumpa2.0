@@ -15,7 +15,7 @@ function App() {
         withConfig(async config => {
             try {
                 const response = await fetch(`${config.API}/api/health`)
-                const data = await response.json()
+                await response.json()
                 setApiStatus("online")
             } catch(e) {
                 setApiStatus("offline")
