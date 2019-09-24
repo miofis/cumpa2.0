@@ -55,9 +55,6 @@ jobs:
       - run: yarn --cwd frontend/ lint
       - run: yarn --cwd frontend/ test
 
-      - setup_remote_docker:
-          docker_layer_caching: true
-
       # heroku
       - run: 'yarn heroku-install'
       - run: 'yarn heroku-login'
@@ -65,4 +62,6 @@ jobs:
       # firebase
       - run: 'yarn firebase-install'
 
+      - setup_remote_docker:
+          docker_layer_caching: true
       - run: 'yarn maybe-deploy'
