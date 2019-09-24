@@ -56,4 +56,4 @@ jobs:
       # - run: yarn --cwd frontend/ test
 
       - run: 'yarn heroku-install'
-      - run: 'heroku --version'
+      - run: 'yarn heroku-login'

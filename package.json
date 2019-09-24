@@ -2,6 +2,7 @@
   "name": "cumpa2.0",
   "version": "1.0.0",
   "scripts": {
-    "heroku-install": "curl https://cli-assets.heroku.com/install.sh | sh"
+    "heroku-install": "curl https://cli-assets.heroku.com/install.sh | sh",
+    "heroku-login": "docker login --username=_ --password=$HEROKU_API_KEY registry.heroku.com"
   }
 }
