@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "heroku-install": "curl https://cli-assets.heroku.com/install.sh | sh",
-    "heroku-login": "docker login --username=_ --password=$HEROKU_API_KEY registry.heroku.com"
+    "heroku-login": "docker login --username=_ --password=$HEROKU_API_KEY registry.heroku.com",
+    "heroku-deploy-staging": "HEROKU_APP=cumpa2-0-staging yarn --cwd backend/ heroku-push && HEROKU_APP=cumpa2-0-staging yarn --cwd backend/ heroku-release"
   }
 }
