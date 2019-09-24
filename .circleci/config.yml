@@ -55,6 +55,4 @@ jobs:
       # - run: yarn --cwd frontend/ lint
       # - run: yarn --cwd frontend/ test
 
-      - run:
-        name: 'Install Heroku CLI'
-        command: 'curl https://cli-assets.heroku.com/install.sh | sh'
+      - run: 'curl https://cli-assets.heroku.com/install.sh | sh'
