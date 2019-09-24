@@ -1,3 +1,5 @@
+set -xe
+
 # get first 8 characters of commit message (to compate with '[review]' string)
 COMMIT_MESSAGE=$(git log -n 1 --pretty=format:%s $CIRCLE_SHA1 | cut -c1-8)
 
