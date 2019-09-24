@@ -19,7 +19,7 @@ jobs:
     steps:
       - checkout
 
-      # Download and cache dependencies
+      # BACKEND
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "backend/package.json" }}
@@ -36,3 +36,21 @@ jobs:
       # run tests!
       - run: yarn --cwd backend/ lint
       - run: yarn --cwd backend/ test
+
+      # FRONTEND
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "frontend/package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+
+      - run: yarn install --frozen-lockfile --cwd frontend/
+
+      - save_cache:
+          paths:
+            - frontend/node_modules
+          key: v1-dependencies-{{ checksum "backend/package.json" }}
+
+      # run tests!
+      - run: yarn --cwd frontend/ lint
+      - run: yarn --cwd frontend/ test
