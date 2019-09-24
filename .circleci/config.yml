@@ -55,5 +55,6 @@ jobs:
       # - run: yarn --cwd frontend/ lint
       # - run: yarn --cwd frontend/ test
 
+      - setup_remote_docker
       - run: 'yarn heroku-install'
       - run: 'yarn heroku-login'
