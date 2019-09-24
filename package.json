@@ -1,0 +1,10 @@
+{
+  "name": "cumpa2.0",
+  "version": "1.0.0",
+  "scripts": {
+    "heroku-install": "curl https://cli-assets.heroku.com/install.sh | sh",
+    "heroku-login": "docker login --username=_ --password=$HEROKU_API_KEY registry.heroku.com",
+    "heroku-deploy": "yarn --cwd backend/ heroku-push && yarn --cwd backend/ heroku-release",
+    "maybe-deploy": "./scripts/maybe_deploy.sh"
+  }
+}
