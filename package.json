@@ -1,0 +1,7 @@
+{
+  "name": "cumpa2.0",
+  "version": "1.0.0",
+  "scripts": {
+    "heroku-install": "curl https://cli-assets.heroku.com/install.sh | sh"
+  }
+}
