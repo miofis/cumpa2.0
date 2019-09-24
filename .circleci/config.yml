@@ -56,10 +56,10 @@ jobs:
       - run: yarn --cwd frontend/ test
 
       - setup_remote_docker:
-        docker_layer_caching: true
+          docker_layer_caching: true
 
       # heroku
       - run: 'yarn heroku-install'
       - run: 'yarn heroku-login'
-      
+
       - run: 'yarn maybe-deploy'
