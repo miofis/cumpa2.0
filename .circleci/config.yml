@@ -58,4 +58,4 @@ jobs:
       - setup_remote_docker
       - run: 'yarn heroku-install'
       - run: 'yarn heroku-login'
-      - run: 'yarn heroku-deploy-staging'
+      - run: 'yarn heroku-maybe-deploy'
