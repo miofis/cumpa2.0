@@ -1,5 +1,10 @@
 # Cumpa 2.0
 
+## Environments
+- [production](https://cumpa-56091.firebaseapp.com)
+- [staging](https://cumpa-staging.firebaseapp.com)
+- [review](https://cumpa-review.firebaseapp.com)
+
 ## Project requirements
 - [Node js v10.x](https://nodejs.org/en/download/)
 - [Yarn](https://yarnpkg.com/lang/en/)
