@@ -7,4 +7,13 @@
 - once your work is ready, create a pull request from `issue-X` to `master` and assign [@goodengineer](https://github.com/goodengineer) for code review.
 
 ## Pull requests
-- at some point there will be automatic checks, but for now make sure that all tests are passing by the time you assign a reviewer.
+- this project uses Circle CI for Continuous Integration. for every commit a pipeline will perform checks on the code (runs linter and tests).
+- the most recent commit on the PR's branch must pass all checks before the PR can be merged
+- the PR must be approved before it can be merged
+
+## Environments
+- this project has 3 environments (production, staging and review)
+- production is manually updated when we want to release a new version to production
+- staging is updated automatically for every commit on master
+- review is there for you to show work updates on a feature branch. in order to deploy to review, simply push an empty commit with the message `[review]` and wait for Circle CI pipeline to finish.
+- the link to each environment can be found in the `README.md` file

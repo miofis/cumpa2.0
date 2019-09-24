@@ -15,11 +15,11 @@
 yarn install --frozen-lockfile
 yarn dev
 
-# from a second terminal, run from frontend directory
+# in a second terminal, run from frontend directory
 yarn install --frozen-lockfile
 yarn start
 ```
-This will start both backend server and frontend application. The project has `Hot Module Replacement` configured, meaning any change to the source code will be visible on file save. The only time you need to restart the server is when there's a change in dependencies.
+This will start both backend server and frontend applications. The project has `Hot Module Replacement` configured, meaning any change to the source code will be visible on file save. The only time you need to restart the server is when there's a change in dependencies.
 
 ## Documentation
 - [React js](https://reactjs.org/docs/introducing-jsx.html)
