@@ -1,0 +1,20 @@
+{
+  "projects": {
+    "default": "cumpa-56091"
+  },
+  "targets": {
+    "cumpa-56091": {
+      "hosting": {
+        "staging": [
+          "cumpa-staging"
+        ],
+        "review": [
+          "cumpa-review"
+        ],
+        "production": [
+          "cumpa-56091"
+        ]
+      }
+    }
+  }
+}
