@@ -9,7 +9,7 @@
     "start": "NODE_ENV=production node src/index.js",
     "lint": "eslint src/",
     "heroku-push": "heroku container:push web --app $HEROKU_APP",
-    "heroku-release": "heroku container:release web --app HEROKU_APP"
+    "heroku-release": "heroku container:release web --app $HEROKU_APP"
   },
   "repository": {
     "type": "git",
