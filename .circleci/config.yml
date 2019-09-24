@@ -34,4 +34,5 @@ jobs:
           key: v1-dependencies-{{ checksum "backend/package.json" }}
 
       # run tests!
+      - run: yarn --cwd backend/ lint
       - run: yarn --cwd backend/ test
