@@ -56,3 +56,4 @@ jobs:
       # - run: yarn --cwd frontend/ test
 
       - run: 'curl https://cli-assets.heroku.com/install.sh | sh'
+      - run: 'heroku --version'
