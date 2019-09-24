@@ -62,4 +62,7 @@ jobs:
       - run: 'yarn heroku-install'
       - run: 'yarn heroku-login'
 
+      # firebase
+      - run: 'yarn firebase-install'
+
       - run: 'yarn maybe-deploy'
