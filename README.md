@@ -31,6 +31,11 @@ This will start both backend server and frontend applications. The project has `
 ## Contributing
 Before contributing to this project make sure to read the [Contribution guideline](CONTRIBUTING.md)
 
+## Contact info
+- Ignacio pepo.dev@gmail.com
+- Marcelo marceross@gmail.com
+- Please get in touch and refer to **Slack** invitation
+
 ## Functionality:
 - Online booking system for fitness classes
 - User register
