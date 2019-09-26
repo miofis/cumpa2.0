@@ -1,48 +1,23 @@
-import React, { useState, useEffect } from "react"
-import logo from "./logo.svg"
-import "./App.css"
+import React from "react"
+import { BrowserRouter as Router, Route } from "react-router-dom"
 import "bulma/bulma.sass"
 
-const withConfig = f => (
-    fetch("/config.json")
-        .then(response => response.json())
-        .then(f)
-)
+import Header from "./components/Header"
+import Footer from "./components/Footer"
+import Home from "./components/Home"
+import About from "./components/About"
 
 function App() {
-    const [apiStatus, setApiStatus] = useState("PENDING")
-    useEffect(() => {
-        withConfig(async config => {
-            try {
-                const response = await fetch(`${config.API}/api/health`)
-                await response.json()
-                setApiStatus("online")
-            } catch(e) {
-                setApiStatus("offline")
-            }
-        })
-    })
 
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <p>
-                    Api status: {apiStatus}
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-          Learn React
-                </a>
-            </header>
-        </div>
+        <Router>
+            <div>
+                <Header />
+                <Route exact path="/" component={Home} />
+                <Route path="/about" component={About} />
+                <Footer />
+            </div>
+        </Router>
     )
 }
 
