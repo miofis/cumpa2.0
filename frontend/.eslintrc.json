@@ -25,6 +25,8 @@
         "jest"
     ],
     "rules": {
+        "react/prop-types": "off",
+        "react/display-name": "off",
         "indent": [
             "error",
             4

@@ -15,6 +15,9 @@ function Header() {
                     <Link to="/about" className="navbar-item is-size-5">
                         About
                     </Link>
+                    <Link to="/login" className="navbar-item is-size-5">
+                        Log in
+                    </Link>
                 </div>
             </div>
         </nav>
