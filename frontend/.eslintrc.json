@@ -1,9 +1,7 @@
 {
     "env": {
         "browser": true,
-        "es6": true,
-        "jest/globals": true,
-        "node": true
+        "es6": true
     },
     "extends": [
       "eslint:recommended",
@@ -21,8 +19,7 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react",
-        "jest"
+        "react"
     ],
     "rules": {
         "react/prop-types": "off",
