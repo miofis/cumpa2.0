@@ -12,11 +12,17 @@ function Header() {
 
             <div className="navbar-menu">
                 <div className="navbar-end">
-                    <Link to="/about" className="navbar-item is-size-5">
-                        About
+                    <Link to="/gym" className="navbar-item is-size-6">
+                        ¿gimnasio?
                     </Link>
-                    <Link to="/login" className="navbar-item is-size-5">
-                        Log in
+                    <Link to="/friend-invites" className="navbar-item is-size-6">
+                        ¿AMIGO? ¡Invita!
+                    </Link>
+                    <Link to="/login" className="navbar-item is-size-6">
+                        iniciar sesión
+                    </Link>
+                    <Link to="/signup" className="navbar-item is-size-6">
+                        registrate
                     </Link>
                 </div>
             </div>

@@ -1,0 +1,36 @@
+@charset "utf-8";
+@import "../../node_modules/bulma/bulma.sass";
+
+$family-robot : "Roboto";
+$green: rgb(139, 195, 74);
+$light-blue: rgb(0, 188, 212);
+
+.has-text-green {
+    color: $green;
+}
+#landing-content {
+    padding-top: 40px;
+    margin-bottom: 10px;
+    font-family: $family-robot;
+    .register-btn {
+        background-color: $light-blue;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 1.5rem 2rem;
+        font-family: "Source Sans Pro", "sans-serif";
+    }
+    .more-info-btn {
+        border-color: $light-blue;
+        &:hover {
+            background-color: $light-blue;
+        }
+    }
+}
+
+.navbar {
+    border-bottom: 1px solid #222;
+}
+footer {
+    padding: 0px !important;
+}
