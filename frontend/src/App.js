@@ -1,12 +1,13 @@
 import React from "react"
 import { BrowserRouter as Router, Route } from "react-router-dom"
-import "bulma/bulma.sass"
+import './style/style.scss';
 
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 import Home from "./components/Home"
 import About from "./components/About"
 import Login from "./components/Login"
+
 
 function App() {
 
