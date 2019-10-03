@@ -125,7 +125,7 @@ function Home() {
                         <h4 className="title is-size-4">Octava compania</h4>
                     </div>
                 </div>
-                
+
                 <div className="columns">
                     <div className="column">
                         <div className="level-right">
