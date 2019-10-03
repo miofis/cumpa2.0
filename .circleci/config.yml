@@ -19,7 +19,7 @@ jobs:
     steps:
       - checkout
 
-      # BACKEND
+      # Download and cache dependencies
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "backend/package.json" }}
@@ -34,8 +34,8 @@ jobs:
           key: v1-dependencies-{{ checksum "backend/package.json" }}
 
       # run tests!
-      - run: yarn --cwd backend/ lint
       - run: yarn --cwd backend/ test
+<<<<<<< HEAD
 
       # FRONTEND
       - restore_cache:
@@ -65,3 +65,5 @@ jobs:
       - setup_remote_docker:
           docker_layer_caching: true
       - run: 'yarn maybe-deploy'
+=======
+>>>>>>> parent of d31b8e5... Ci improvements (#6)
