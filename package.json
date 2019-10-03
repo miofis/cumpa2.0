@@ -7,6 +7,6 @@
     "heroku-deploy": "yarn --cwd backend/ heroku-push && yarn --cwd backend/ heroku-release",
     "maybe-deploy": "./scripts/maybe_deploy.sh",
     "firebase-install": "yarn global add firebase-tools",
-    "firebase-deploy": "yarn --cwd frontend/ build && yarn --cwd frontend/ set-api && yarn --cwd frontend/ deploy"
+    "firebase-deploy": "CI=false yarn --cwd frontend/ build && yarn --cwd frontend/ set-api && yarn --cwd frontend/ deploy"
   }
 }
