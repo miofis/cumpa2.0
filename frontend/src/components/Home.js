@@ -28,7 +28,7 @@ function Home() {
                         <figure className="image is-3by2">
                             <img src="https://bulma.io/images/placeholders/256x256.png"  alt="demo.jpg" />
                         </figure>
-                        <p className="has-text-right">"Al fin voy al gimnasio, gracias a mi amiga"&nbsp;</p>
+                        <p className="has-text-right">&quot;Al fin voy al gimnasio, gracias a mi amiga&quot;&nbsp;</p>
                         <p className="has-text-right">Cristina&nbsp;&nbsp;</p>
                     </div>
                 </div>
