@@ -2,7 +2,7 @@ import React from "react"
 
 function Gym(props) {
     return (
-        <div className="column" key={props.id}>
+        <div>
             <figure className="image is-5by3" style={{marginBottom: 10}}>
                 <img src={props.img}  alt="demo.jpg" />
             </figure>

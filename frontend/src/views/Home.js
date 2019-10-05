@@ -1,6 +1,7 @@
 import React , { useState, useEffect } from "react"
-import Activity from "./Activity"
-import Gym from "./Gym"
+import Activity from "../components/Activity"
+import Gym from "../components/Gym"
+import Recommender from "../components/Recommender"
 
 function fetchDataFromApi() {
     return {
@@ -12,7 +13,8 @@ function fetchDataFromApi() {
         gyms: [
             { id: "1", name: "Octava compania", img: "https://bulma.io/images/placeholders/256x256.png" },
             { id: "2", name: "Octava compania", img: "https://bulma.io/images/placeholders/256x256.png" },
-        ]
+        ],
+        recommender: { name: "Cristina", description: "Al fin voy al gimnasio, gracias a mi amiga", img: "https://bulma.io/images/placeholders/256x256.png" }
     }
 }
 
@@ -20,7 +22,8 @@ function Home() {
 
     const [homeData, setHomeData] = useState({
         activities: [],
-        gyms: []
+        gyms: [],
+        recommender: [],
     })
     useEffect(() => {
         const fetchData = async () => {
@@ -54,11 +57,7 @@ function Home() {
                         </ul>
                     </div>
                     <div className="column">
-                        <figure className="image is-3by2">
-                            <img src="https://bulma.io/images/placeholders/256x256.png"  alt="demo.jpg" />
-                        </figure>
-                        <p className="has-text-right">&quot;Al fin voy al gimnasio, gracias a mi amiga&quot;&nbsp;</p>
-                        <p className="has-text-right">Cristina&nbsp;&nbsp;</p>
+                        <Recommender name={homeData.recommender.name} img={homeData.recommender.img} description={homeData.recommender.description} />
                     </div>
                 </div>
                 <div className="columns">
@@ -71,7 +70,11 @@ function Home() {
                         <h1 className="title">Las clases de hoy</h1>
                         <p className="subtitle">Todos los días se suman nuevas clases</p>
                         <div className="columns">
-                            {homeData.activities.map(Activity)}
+                            {homeData.activities.map(activity => 
+                                <div className="column" key={activity.id}>
+                                    <Activity name={activity.name} description={activity.description} img={activity.img} />
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>
@@ -100,7 +103,13 @@ function Home() {
                             </div>
                         </div>
                     </div>
-                    {homeData.gyms.map(Gym)}
+                    
+                    {homeData.gyms.map(gym => 
+                        <div className="column" key={gym.id}>
+                            <Gym name={gym.name} img={gym.img} />
+                        </div>
+                    )}
+
                 </div>
             
                 <div className="columns">

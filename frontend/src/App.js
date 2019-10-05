@@ -2,11 +2,11 @@ import React from "react"
 import { BrowserRouter as Router, Route } from "react-router-dom"
 import "./style/style.scss"
 
-import Header from "./components/Header"
-import Footer from "./components/Footer"
-import Home from "./components/Home"
-import About from "./components/About"
-import Login from "./components/Login"
+import Header from "./views/Header"
+import Footer from "./views/Footer"
+import Home from "./views/Home"
+import About from "./views/About"
+import Login from "./views/Login"
 
 
 function App() {
