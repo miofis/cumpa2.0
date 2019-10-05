@@ -3,6 +3,10 @@ import Activity from "../components/Activity"
 import Gym from "../components/Gym"
 import Recommender from "../components/Recommender"
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faHandPointRight, faArrowAltCircleRight, faForward } from "@fortawesome/free-solid-svg-icons"
+
+
 function fetchDataFromApi() {
     return {
         activities: [
@@ -41,23 +45,19 @@ function Home() {
                         <h1 className="title is-size-1 has-text-weight-bold" style={{paddingBottom: 100}}>
                         Entrena con quien <br></br>quieras y donde sea
                         </h1>
-                        <ul>
+                        <ul className="has-text-green">
                             <li className="level-left is-size-5">
-                                <span className="icon is-large has-text-green">
-                                    <i className="far fa-hand-point-right fa-2x"></i>
-                                </span>
+                                <FontAwesomeIcon icon={faHandPointRight} size="2x" />
                                 <span className="subtitle" style={{paddingLeft: 10}}>Con tu amigo, profe o compañero</span>
                             </li>
-                            <li className="level-left is-size-5">
-                                <span className="icon is-large has-text-green">
-                                    <i className="far fa-hand-point-right fa-2x"></i>
-                                </span>
+                            <li className="level-left is-size-5">                            
+                                <FontAwesomeIcon icon={faHandPointRight} size="2x" />
                                 <span className="subtitle" style={{paddingLeft: 10}}>Enterate de nuevas clases a <br></br> precios increíbles, y hasta <br></br> gratis.</span>
                             </li>
                         </ul>
                     </div>
                     <div className="column">
-                        <Recommender name={homeData.recommender.name} img={homeData.recommender.img} description={homeData.recommender.description} />
+                        <Recommender data={homeData.recommender} />
                     </div>
                 </div>
                 <div className="columns">
@@ -81,10 +81,8 @@ function Home() {
                 <div className="columns">
                     <div className="column">
                         <div className="level-right">
-                            <a href="#">
-                                <span className="icon is-large has-text-black">
-                                    <i className="far fa-arrow-alt-circle-right fa-3x"></i>
-                                </span>
+                            <a href="#" className="has-text-black">
+                                <FontAwesomeIcon icon={faArrowAltCircleRight} size="3x" />
                             </a>
                         </div>
                     </div>
@@ -115,10 +113,8 @@ function Home() {
                 <div className="columns">
                     <div className="column">
                         <div className="level-right">
-                            <a href="#">
-                                <span className="icon is-large has-text-black">
-                                    <i className="fas fa-forward fa-3x"></i>
-                                </span>
+                            <a href="#" className="has-text-black">
+                                <FontAwesomeIcon icon={faForward} size="3x" />
                             </a>
                         </div>
                     </div>
